@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="79" id="KGk-i7-Jjw" customClass="ProfileTableViewCell" customModule="TableSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="022-25-A2O">
+                        <rect key="frame" x="5" y="43" width="336" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="022-25-A2O" secondAttribute="height" multiplier="16:1" id="qnY-Zb-Kyt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llD-st-jIO">
+                        <rect key="frame" x="5" y="14" width="322" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="llD-st-jIO" secondAttribute="height" multiplier="19:12" constant="284" id="atY-SJ-Wk0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="022-25-A2O" secondAttribute="bottom" constant="15" id="3wu-iL-1lS"/>
+                    <constraint firstAttribute="trailing" secondItem="022-25-A2O" secondAttribute="trailing" constant="6" id="Ady-wV-P6Q"/>
+                    <constraint firstItem="022-25-A2O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="43" id="BCe-Z5-hZe"/>
+                    <constraint firstAttribute="trailing" secondItem="llD-st-jIO" secondAttribute="trailing" constant="20" id="Hrp-cX-fh0"/>
+                    <constraint firstItem="llD-st-jIO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="dq7-3O-ib5"/>
+                    <constraint firstAttribute="bottom" secondItem="llD-st-jIO" secondAttribute="bottom" constant="41" id="nkE-u6-Jh9"/>
+                    <constraint firstItem="022-25-A2O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="q0i-60-zdg"/>
+                    <constraint firstItem="llD-st-jIO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="swW-a1-iXI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="Title" destination="llD-st-jIO" id="d9l-Vv-Gy6"/>
+                <outlet property="description" destination="022-25-A2O" id="aOn-8G-Spu"/>
+                <outlet property="title" destination="llD-st-jIO" id="Usr-dV-VCO"/>
+            </connections>
+            <point key="canvasLocation" x="104.58015267175573" y="44.718309859154935"/>
+        </tableViewCell>
+    </objects>
+</document>
