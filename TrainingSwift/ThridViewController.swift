@@ -12,9 +12,6 @@ class ThridViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 4
     }
     
-    @IBAction func btnEdit(_ sender: Any) {
-        performSegue(withIdentifier: "FourthView", sender: nil)
-    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell =
         tableView.dequeueReusableCell(withIdentifier: profileCell, for: indexPath) as!

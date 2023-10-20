@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="otq-D4-MHk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oxV-lj-88Y">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,6 +8,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Fifth View Controller-->
+        <scene sceneID="zsO-N2-1qq">
+            <objects>
+                <viewController id="PHt-aL-c9H" customClass="FifthViewController" customModule="TrainingSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ilS-um-gGw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uwB-Sw-xLh">
+                                <rect key="frame" x="16" y="128" width="361" height="491"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uwB-Sw-xLh" secondAttribute="height" multiplier="361:535" id="M2f-ft-iKl"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ssJ-xU-5Gh">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ssJ-xU-5Gh" id="Ll6-rG-eEk">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4E-yY-y7K">
+                                <rect key="frame" x="169" y="701" width="55" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="btnAdd:" destination="PHt-aL-c9H" eventType="touchUpInside" id="Sy6-Zf-zQ9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rG8-4r-bU5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H4E-yY-y7K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ilS-um-gGw" secondAttribute="leadingMargin" id="33s-lb-XPC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H4E-yY-y7K" secondAttribute="trailing" constant="153" id="EAw-Oy-vC0"/>
+                            <constraint firstItem="uwB-Sw-xLh" firstAttribute="leading" secondItem="ilS-um-gGw" secondAttribute="leadingMargin" id="RjL-5p-YBY"/>
+                            <constraint firstItem="H4E-yY-y7K" firstAttribute="top" secondItem="ilS-um-gGw" secondAttribute="topMargin" constant="598" id="TYj-DJ-ih4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="H4E-yY-y7K" secondAttribute="bottom" constant="82" id="g8I-qq-VuO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uwB-Sw-xLh" secondAttribute="bottom" constant="199" id="i5H-fo-26I"/>
+                            <constraint firstItem="uwB-Sw-xLh" firstAttribute="top" secondItem="ilS-um-gGw" secondAttribute="topMargin" constant="25" id="lcT-kA-XuX"/>
+                            <constraint firstItem="uwB-Sw-xLh" firstAttribute="trailing" secondItem="ilS-um-gGw" secondAttribute="trailingMargin" id="q0r-kr-Hti"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fvT-ie-9Fc"/>
+                    <connections>
+                        <outlet property="dataTable" destination="uwB-Sw-xLh" id="Hwy-m7-9qK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gE-fs-jzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954.96183206106866" y="-978.16901408450713"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="DGv-wM-d32">
             <objects>
@@ -33,7 +89,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEz-PO-oZc">
-                                <rect key="frame" x="164.66666666666666" y="369" width="64" height="34.666666666666686"/>
+                                <rect key="frame" x="164.66666666666666" y="369" width="64" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send"/>
                                 <connections>
@@ -46,11 +102,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69C-KE-3lr">
-                                <rect key="frame" x="137" y="408.66666666666669" width="119" height="35"/>
+                                <rect key="frame" x="137" y="408.33333333333331" width="119" height="35.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Go to Profile"/>
                                 <connections>
                                     <action selector="btnProfile:" destination="cTv-w8-Qf0" eventType="touchUpInside" id="9FP-n8-E0M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpP-Bx-mjC">
+                                <rect key="frame" x="142" y="451" width="108" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="NuV-zk-8fS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Add Profile"/>
+                                <connections>
+                                    <segue destination="PHt-aL-c9H" kind="push" id="ndV-VB-4rx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,11 +129,15 @@
                             <constraint firstItem="yEz-PO-oZc" firstAttribute="centerX" secondItem="gi6-ui-lXf" secondAttribute="centerX" id="2wp-lL-6Ur"/>
                             <constraint firstItem="bJY-IU-SOG" firstAttribute="leading" secondItem="ztn-Em-kCv" secondAttribute="leading" constant="76" id="5Al-jW-a2d"/>
                             <constraint firstItem="gi6-ui-lXf" firstAttribute="centerX" secondItem="bJY-IU-SOG" secondAttribute="centerX" id="AXr-4e-oF0"/>
+                            <constraint firstItem="CpP-Bx-mjC" firstAttribute="centerX" secondItem="69C-KE-3lr" secondAttribute="centerX" id="AwC-Bl-MCp"/>
+                            <constraint firstAttribute="bottom" secondItem="CpP-Bx-mjC" secondAttribute="bottom" constant="366" id="F5j-2Y-4m3"/>
                             <constraint firstItem="ztn-Em-kCv" firstAttribute="bottom" secondItem="bJY-IU-SOG" secondAttribute="bottom" constant="33" id="Gvf-14-6df"/>
                             <constraint firstItem="gi6-ui-lXf" firstAttribute="centerX" secondItem="iFv-0j-l2K" secondAttribute="centerX" id="Ohc-iR-hPk"/>
+                            <constraint firstItem="CpP-Bx-mjC" firstAttribute="leading" secondItem="ztn-Em-kCv" secondAttribute="leading" constant="142" id="SQE-SL-tTs"/>
                             <constraint firstItem="69C-KE-3lr" firstAttribute="centerY" secondItem="iFv-0j-l2K" secondAttribute="centerY" id="TAL-cK-5uv"/>
                             <constraint firstItem="69C-KE-3lr" firstAttribute="top" secondItem="yEz-PO-oZc" secondAttribute="bottom" constant="5" id="Ucp-fv-vOd"/>
                             <constraint firstItem="69C-KE-3lr" firstAttribute="centerX" secondItem="Vrf-MA-PKE" secondAttribute="centerX" id="Xxw-cp-uzW"/>
+                            <constraint firstItem="CpP-Bx-mjC" firstAttribute="top" secondItem="69C-KE-3lr" secondAttribute="bottom" constant="7.3333333333333144" id="j0I-fZ-Rqv"/>
                             <constraint firstItem="gi6-ui-lXf" firstAttribute="top" secondItem="ztn-Em-kCv" secondAttribute="top" constant="39" id="uxj-Qj-cWc"/>
                             <constraint firstItem="Vrf-MA-PKE" firstAttribute="leading" secondItem="bJY-IU-SOG" secondAttribute="leading" id="yhA-Yf-khk"/>
                             <constraint firstItem="yEz-PO-oZc" firstAttribute="top" secondItem="iFv-0j-l2K" secondAttribute="top" constant="369" id="zZ0-TC-d12"/>
@@ -162,7 +233,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Edit"/>
                                 <connections>
-                                    <action selector="btnEdit:" destination="0Sw-2d-g5d" eventType="touchUpInside" id="KSw-cX-h54"/>
                                     <segue destination="otq-D4-MHk" kind="push" identifier="FourthView" id="Sg7-Vy-uSO"/>
                                 </connections>
                             </button>
